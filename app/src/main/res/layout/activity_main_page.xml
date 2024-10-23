@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul_blanco"
+    tools:context=".MainPageActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_superior"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/azul_oscuro"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/basketball"
+            android:text="HOOPSCORE"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/basquetball"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/basketball"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@id/txtTitulo"
+            app:layout_constraintTop_toTopOf="@id/txtTitulo"
+            app:layout_constraintBottom_toBottomOf="@id/txtTitulo" />
+
+        <ImageView
+            android:id="@+id/user"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/user"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/layout_superior"
+            app:layout_constraintBottom_toBottomOf="@id/layout_superior"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/liga_endesa"
+        android:layout_width="0dp"
+        android:layout_height="116dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="64dp"
+        android:src="@drawable/liga_endesa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layout_superior" />
+
+    <FrameLayout
+        android:id="@+id/partidos_layout"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:background="@color/azul_normal"
+        app:layout_constraintTop_toBottomOf="@+id/liga_endesa"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <ImageView
+            android:id="@+id/menor_que"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menor_que"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="start|center_vertical"/>
+
+        <TextView
+            android:id="@+id/partidos_hoy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/basketball"
+            android:text="PARTIDOS "
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/menor_que"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textFechaPartidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/basketball"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:layout_marginLeft="50dp"
+            app:layout_constraintStart_toEndOf="@id/menor_que"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/mayor_que"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mayor_que"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="end|center_vertical"/>
+
+    </FrameLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="230dp"
+        android:layout_marginBottom="70dp"
+         >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPartidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/azul_oscuro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/jugador_bottom"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="left"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/jugador" />
+
+        <ImageView
+            android:id="@+id/casa_bottom"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/megafono_bottom"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:srcCompat="@drawable/megafono" />
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

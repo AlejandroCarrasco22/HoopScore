@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "145000940363",
+    "project_id": "hoopscore-676fa",
+    "storage_bucket": "hoopscore-676fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145000940363:android:c92cce1cb1e4af012fdece",
+        "android_client_info": {
+          "package_name": "com.uva.hoopscore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG5Cdj-Xj9ovXHg8gvkGygClCf_Onlog4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
